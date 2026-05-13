@@ -2,7 +2,7 @@
 
 Web Monitor is a web monitoring service for tracking website availability, response times, and uptime history.
 
-The application periodically checks configured websites, stores monitoring results, and displays status information in a frontend dashboard.
+The application periodically checks configured websites, stores monitoring results, and displays status information in a dashboard.
 
 ## Features
 
@@ -32,7 +32,7 @@ The application periodically checks configured websites, stores monitoring resul
 
 - GitHub Actions
 - PostgreSQL
-- Docker (later)
+- Docker
 - Vercel
 - Render
 - Playwright
@@ -42,7 +42,7 @@ The application periodically checks configured websites, stores monitoring resul
 
 ## Development Plan
 
-### Phase 1 — Project Setup
+### Phase 1: Project Setup
 
 - [x] Initialize repository
 - [x] Setup frontend and backend
@@ -51,7 +51,7 @@ The application periodically checks configured websites, stores monitoring resul
 - [x] Setup prettier
 - [x] Configure branch protection rules
 
-### Phase 2 — Core Monitoring Logic
+### Phase 2: Core Monitoring Logic
 
 - [ ] Create monitor model
 - [ ] Add monitor creation API
@@ -60,7 +60,7 @@ The application periodically checks configured websites, stores monitoring resul
 - [ ] Save response status and latency
 - [ ] Create frontend monitor list
 
-### Phase 3 — Database
+### Phase 3: Database
 
 - [ ] Setup PostgreSQL
 - [ ] Add database layer
@@ -68,7 +68,7 @@ The application periodically checks configured websites, stores monitoring resul
 - [ ] Add migrations
 - [ ] Configure test database
 
-### Phase 4 — Testing
+### Phase 4: Testing
 
 - [ ] Add backend unit tests
 - [ ] Add integration tests
@@ -76,7 +76,7 @@ The application periodically checks configured websites, stores monitoring resul
 - [ ] Add Playwright e2e tests
 - [ ] Run tests in CI
 
-### Phase 5 — Deployment
+### Phase 5: Deployment
 
 - [ ] Deploy frontend
 - [ ] Deploy backend
@@ -84,7 +84,7 @@ The application periodically checks configured websites, stores monitoring resul
 - [ ] Add preview deployments
 - [ ] Add production health checks
 
-### Phase 6 — Monitoring & Observability
+### Phase 6: Monitoring & Observability
 
 - [ ] Add logs
 - [ ] Add uptime monitoring
@@ -104,7 +104,3 @@ feature branch
 → merge
 → deployment
 ```
-
-## Current Status
-
-CI pipeline is configured and running successfully on GitHub Actions.

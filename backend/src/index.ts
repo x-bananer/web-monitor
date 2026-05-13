@@ -11,3 +11,5 @@ app.get('/', (_req, res) => {
 app.listen(PORT, () => {
 	console.log(`Server started on port http://localhost:${PORT}`);
 });
+
+const x: string = 123;

@@ -28,10 +28,13 @@ The application periodically checks configured websites, stores monitoring resul
 - Express
 - TypeScript
 
+### Database
+
+- PostgreSQL
+
 ### Planned Infrastructure
 
 - GitHub Actions
-- PostgreSQL
 - Docker
 - Vercel
 - Render

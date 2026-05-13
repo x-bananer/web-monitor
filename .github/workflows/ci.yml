@@ -33,6 +33,7 @@ jobs:
               - '.github/workflows/**'
 
   frontend:
+    name: Frontend
     needs: changes
     if: needs.changes.outputs.frontend == 'true' || needs.changes.outputs.workflow == 'true'
     
@@ -58,6 +59,7 @@ jobs:
       - run: npm run format:check --if-present
 
   backend:
+    name: Backend
     needs: changes
     if: needs.changes.outputs.backend == 'true' || needs.changes.outputs.workflow == 'true'
     
@@ -81,3 +83,20 @@ jobs:
       - run: npm test --if-present
       - run: npm run lint:check --if-present
       - run: npm run format:check --if-present
+
+  merge-gate:
+    name: Merge Gate
+    needs: [changes, frontend, backend]
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fail if frontend or backend failed
+        run: |
+          if [ "${{ needs.frontend.result }}" = "failure" ] || [ "${{ needs.frontend.result }}" = "cancelled" ]; then
+            exit 1
+          fi
+
+          if [ "${{ needs.backend.result }}" = "failure" ] || [ "${{ needs.backend.result }}" = "cancelled" ]; then
+            exit 1
+          fi

@@ -11,6 +11,7 @@ on:
 
 jobs:
   changes:
+    name: Detect Changes
     runs-on: ubuntu-latest
 
     outputs:

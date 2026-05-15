@@ -1,0 +1,16 @@
+import request from 'supertest';
+import app from '../../src/app.js';
+
+import { describe, it, expect } from 'vitest';
+
+describe('GET /api/v1', () => {
+	it('returns 200 and health payload', async () => {
+		const res = await request(app).get('/api/v1');
+
+		expect(res.status).toBe(200);
+		expect(res.body).toEqual({
+			status: 'ok',
+			version: 'v1',
+		});
+	});
+});

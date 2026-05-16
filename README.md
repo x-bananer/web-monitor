@@ -32,6 +32,10 @@ The application periodically checks configured websites, stores monitoring resul
 
 - PostgreSQL
 
+## Database schema
+
+![Database schema](./docs/database-schema.png)
+
 ### Planned Infrastructure
 
 - GitHub Actions
